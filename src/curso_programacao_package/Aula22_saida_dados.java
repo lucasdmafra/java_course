@@ -1,6 +1,6 @@
 package curso_programacao_package;
 
-public class Aula22_saida_dados {
+public class aula22_saida_dados {
 
 	public static void main(String[] args) {
 		
