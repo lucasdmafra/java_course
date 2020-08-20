@@ -1,4 +1,4 @@
-package aula76_sobrecarga;
+package aula77_encapsulation;
 
 import java.util.Scanner;
 
@@ -10,13 +10,15 @@ public class Programa {
 		
 		System.out.print("name: ");
 		String name = sc.nextLine();
-		
 		System.out.print("preco: ");
 		Double price = sc.nextDouble();
 		
-		//Product p2 = new Product(); //in case of default constructor explicit
-		
 		Product produto = new Product(name, price);
+		
+		produto.setName("Computer"); 						//setName used
+		System.out.println("name: " + produto.getName()); 	//getName used
+		produto.setPrice(599.00);
+		System.out.println("price: " + produto.getPrice());
 		
 		System.out.println(produto+"\n");
 		System.out.println("number to add: ");
@@ -34,5 +36,4 @@ public class Programa {
 		sc.close();
 			
 	}
-
 }

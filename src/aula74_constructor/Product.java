@@ -1,4 +1,4 @@
-package aula76_sobrecarga;
+package aula74_constructor;
 
 public class Product {
 	
@@ -6,24 +6,12 @@ public class Product {
 	public double price;
 	public int quantity;
 	
-	//default constructor explicit to use (3 options now)
-	public Product() {
-	}
-	
 	//constructor
 	public Product(String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 	}
-	
-	//overloaded method
-	public Product(String name, double price) {
-		this.name = name;
-		this.price = price;
-		// quantity = 0;  //é opcional. valor padrão já é 0.
-	}
-	
 	
 	public double TotalValueInStock() {
 		return price *quantity;
