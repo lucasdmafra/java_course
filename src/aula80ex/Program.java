@@ -7,31 +7,66 @@ public class Program {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		
+		Account account;
 		
 		System.out.print("Enter account number: ");
-		int numeroConta = sc.nextInt();
+		int number = sc.nextInt();
 		System.out.print("Enter account holder: ");
-		String titular = sc.nextLine();
 		sc.nextLine();
-		
+		String holder = sc.nextLine();
 		System.out.print("Is there an initial deposit? (y/n): ");
-		String deposito = sc.nextLine();
-		if (deposito == "y") {
+		char response = sc.next().charAt(0);
+		
+		if (response == 'y') {
 			System.out.print("Enter initial deposit value: ");
-			Double valor = sc.nextDouble();
+			double initialDeposit = sc.nextDouble();
+			account = new Account(number, holder, initialDeposit);
 		} else {
-			Double valor = 0.0; 
+			account = new Account(number, holder);
 		}
 		
-		Double valor = 0.0;
+		System.out.println("\nAccount data:");
+		System.out.print(account);
 		
-		Conta conta = new Conta(numeroConta, titular, valor);
+		System.out.print("\n\nEnter a deposit value: ");
+		double depositValue = sc.nextDouble();
+		account.deposit(depositValue);
 		
+		System.out.print("\nUpdated data: \n");
+		System.out.print(account);
 		
+		System.out.print("\n\nEnter a withdrow value: ");
+		double withdrawValue = sc.nextDouble();
+		account.withdraw(withdrawValue);
 		
+		System.out.print("\nUpdated data: \n");
+		System.out.print(account + " (Tax of $5 for each withdraw)");
+
 		sc.close();
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
