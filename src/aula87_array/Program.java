@@ -10,7 +10,6 @@ public class Program {
 		
 		int n = sc.nextInt();
 		
-		
 		double[] vect = new double[n];		
 		
 		for (int i = 0; i<n; i++) {
@@ -22,7 +21,7 @@ public class Program {
 				sum += vect[i];
 			}
 		
-		double avg = sum / 3;
+		double avg = sum / n;
 		
 		System.out.printf("Average Height: %.2f\n", avg);
 		
